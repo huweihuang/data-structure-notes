@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <malloc.h>
+
 typedef struct node
 {	
 	char data;			/*存放字符*/
 	struct node *next;	/*指针域*/
 } LinkString;
+
 void Assign(LinkString *&s,char t[])
 {
 	int i=0;
@@ -21,6 +23,7 @@ void Assign(LinkString *&s,char t[])
 	}
 	tc->next=NULL;		/*终端结点的next置NULL*/
 }
+
 void StrCopy(LinkString *&s,LinkString *t)	/*t=>s*/
 {
 	LinkString *p=t->next,*q,*tc;
@@ -36,6 +39,7 @@ void StrCopy(LinkString *&s,LinkString *t)	/*t=>s*/
     }
 	tc->next=NULL;		/*终端结点的next置NULL*/
 }
+
 int StrLength(LinkString *s)
 {
 	int n=0;
@@ -46,6 +50,7 @@ int StrLength(LinkString *s)
 	}
     return(n);
 }
+
 int StrEqual(LinkString *s,LinkString *t)
 {
 	LinkString *p=s->next,*q=t->next;
@@ -59,6 +64,7 @@ int StrEqual(LinkString *s,LinkString *t)
 		return(0);
 	return(1);
 }
+
 LinkString *Concat(LinkString *s,LinkString *t)
 {
 	LinkString *p=s->next,*q,*tc,*str;
@@ -83,6 +89,7 @@ LinkString *Concat(LinkString *s,LinkString *t)
     tc->next=NULL;
     return(str);
 }
+
 LinkString *SubStr(LinkString *s,int i,int j)
 {
 	int k=1;
@@ -109,6 +116,7 @@ LinkString *SubStr(LinkString *s,int i,int j)
 	}
 	return(str);
 }
+
 int Index(LinkString *s,LinkString *t)
 {
 	LinkString *p=s->next,*p1,*q,*q1;
@@ -131,6 +139,7 @@ int Index(LinkString *s,LinkString *t)
 	}
 	return(-1);		/*若不是子串,返回-1*/
 }
+
 int InsStr(LinkString *&s,int i,LinkString *t)
 {
 	int k;
@@ -151,6 +160,7 @@ int InsStr(LinkString *&s,int i,LinkString *t)
 	str->next=q;		/*将*q链接到*str之后*/
 	return(1);
 }
+
 int DelStr(LinkString *&s,int i,int j)
 {
 	int k;
@@ -173,6 +183,7 @@ int DelStr(LinkString *&s,int i,int j)
 	p->next=q;
 	return(1);
 }
+
 LinkString *RepStrAll(LinkString *s,LinkString *s1,LinkString *s2)
 {
 	int i;
@@ -185,6 +196,7 @@ LinkString *RepStrAll(LinkString *s,LinkString *s1,LinkString *s2)
 	}
 	return(s);
 }
+
 void DispStr(LinkString *s)
 {
 	LinkString *p=s->next;
@@ -195,6 +207,7 @@ void DispStr(LinkString *s)
 	}
 	printf("\n");
 }
+
 void main()
 {
 	LinkString *s1,*s2,*s3,*s4,*s5,*s6,*s7;

@@ -1,23 +1,28 @@
 #include <stdio.h>
 #include <malloc.h>
 #define MAXVEX 100
+
 typedef char VertexType[3];
+
 typedef struct edgenode
 {	
 	int adjvex;      			/*邻接点序号*/
 	int value;  				/*边的权值*/
 	struct edgenode *next;		/*下一条边的顶点*/
 } ArcNode;						/*每个顶点建立的单链表中结点的类型*/
+
 typedef struct vexnode
 {
 	VertexType data;       		/*结点信息*/
 	ArcNode *firstarc; 			/*指向第一条边结点*/
 } VHeadNode;					/*单链表的头结点类型*/
+
 typedef struct 
 {
 	int n,e;					/*n为实际顶点数,e为实际边数*/
 	VHeadNode adjlist[MAXVEX];	/*单链表头结点数组*/
 } AdjList; 						/*图的邻接表类型*/
+
 int CreateAdjList(AdjList *&G)	/*建立有向图的邻接表*/
 {
 	int i,b,t,w;
@@ -51,6 +56,7 @@ int CreateAdjList(AdjList *&G)	/*建立有向图的邻接表*/
 	}
 	return(1);
 }
+
 void DispAdjList(AdjList *G)
 {
 	int i;
@@ -68,6 +74,7 @@ void DispAdjList(AdjList *G)
 		printf("∧\n");
 	}
 }
+
 void main()
 {
 	AdjList *G;

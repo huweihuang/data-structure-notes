@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <string.h>
+
 typedef struct QNode 
 {
 	char data[10];
 	struct QNode *next;
 } QType;		/*链队结点类型*/
+
 typedef struct 
 {
 	QType *front,*rear;
 } LinkQueue;	/*链队类型*/
+
 void SeeDoctor()
 {
 	int sel,flag=1;
@@ -68,6 +71,7 @@ void SeeDoctor()
 		}
 	}
 }
+
 void main()
 {
 	SeeDoctor();

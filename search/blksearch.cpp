@@ -1,18 +1,23 @@
 #include <stdio.h>
 #define MaxSize 100
 #define MaxBlk 20
+
 typedef int KeyType;
+
 typedef char ElemType[10];
+
 typedef struct
 {	
 	KeyType key;   	/*存放关键字,KeyType为关键字类型*/
     ElemType data;	/*其他数据, ElemType为其他数据的类型*/
 } LineList;
+
 typedef struct
 {	
 	KeyType key;
 	int low,high;
 } IDXType;			/*索引表的类型*/
+
 int BlkSearch(LineList R[],IDXType idx[],int m,KeyType k)
 {
 	int low=0,high=m-1,mid,i,j,find=0;

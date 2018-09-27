@@ -4,11 +4,13 @@
 #define MAXE 20			/*线性表中最多元素个数*/
 #define MAXR 10			/*基数的最大取值*/
 #define MAXD 8			/*关键字位数的最大取值*/
+
 typedef struct node
 {	
 	char data[MAXD];	/*记录的关键字定义的字符串*/
    	struct node *next;
 } RecType;
+
 void RadixSort(RecType *&p,int r,int d) 
 /*p为待排序序列链表指针,r为基数,d为关键字位数*/
 {
@@ -46,6 +48,7 @@ void RadixSort(RecType *&p,int r,int d)
 		t->next=NULL;					/*最后一个结点的next域置NULL*/
 	}
 }
+
 void main()
 {
 	RecType *h=NULL,*p,*t;

@@ -2,12 +2,15 @@
 #include <malloc.h>
 #define MaxSize 100
 #define MaxWidth 40
+
 typedef char ElemType;
+
 typedef struct tnode
 {
 	ElemType data;
 	struct tnode *lchild,*rchild;
 } BTNode;
+
 void CreateBTree(BTNode * &bt,char *str)	/*由str创建二叉链bt*/
 {
 	BTNode *St[MaxSize],*p=NULL;
@@ -38,6 +41,7 @@ void CreateBTree(BTNode * &bt,char *str)	/*由str创建二叉链bt*/
 		ch=str[j];
 	}
 }
+
 int BTHeight(BTNode *bt)	/*求二叉树高度*/
 {
    	int lchilddep,rchilddep;
@@ -48,6 +52,7 @@ int BTHeight(BTNode *bt)	/*求二叉树高度*/
 		return (lchilddep>rchilddep)? (lchilddep+1):(rchilddep+1);
    	}
 }
+
 int NodeCount(BTNode *bt)	/*求二叉树bt的结点个数*/
 {
 	int num1,num2;
@@ -59,6 +64,7 @@ int NodeCount(BTNode *bt)	/*求二叉树bt的结点个数*/
         	return (num1+num2+1);
 	}
 }
+
 int LeafCount(BTNode *bt)	/*求二叉树bt的叶子结点个数*/
 {
 	int num1,num2;
@@ -72,6 +78,7 @@ int LeafCount(BTNode *bt)	/*求二叉树bt的叶子结点个数*/
         	return (num1+num2);
 	}
 }
+
 void DispBTree(BTNode *bt)	/*以括号表示法输出二叉树*/
 {
 	if (bt!=NULL)
@@ -88,6 +95,7 @@ void DispBTree(BTNode *bt)	/*以括号表示法输出二叉树*/
 		}
 	}
 }
+
 void DispBTree1(BTNode *bt)  /*以凹入表示法输出一棵二叉树*/
 {
 	BTNode *St[MaxSize],*p;
@@ -133,6 +141,7 @@ void DispBTree1(BTNode *bt)  /*以凹入表示法输出一棵二叉树*/
 		}
 	}
 }
+
 void main()
 {
 	BTNode *bt;

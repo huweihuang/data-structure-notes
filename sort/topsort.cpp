@@ -10,6 +10,7 @@ typedef struct vertex
 	int adjvex;
 	VertexType data;
 } VType;
+
 typedef struct graph
 {	
 	int n,e;					/*n为实际顶点数,e为实际边数*/
@@ -30,6 +31,7 @@ typedef struct vexnode
 	int count;             		/*存放顶点入度,新增用于拓扑排序*/
 	ArcNode *firstarc; 			/*指向第一条边结点*/
 } VHeadNode;					/*单链表的头结点类型*/
+
 typedef struct 
 {
 	int n,e;					/*n为实际顶点数,e为实际边数*/
@@ -53,6 +55,7 @@ void DispAdjList(AdjList *G)	/*显示邻接表(含顶点入度)*/
 		printf("∧\n");
 	}
 }
+
 void MatToList(AdjMatix g,AdjList *&G)  /*例6.3算法:将邻接矩阵g转换成邻接表G*/
 {
 	int i,j;
@@ -104,6 +107,7 @@ void TopSort(AdjList *G)
 			}
 		}
 }
+
 void main()
 {
 	int i,j;

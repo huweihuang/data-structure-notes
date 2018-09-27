@@ -1,17 +1,21 @@
 #include <stdio.h>
 #include <malloc.h>
 #define MaxSize 100		/*哈希表最大长度*/
+
 typedef int KeyType;
+
 typedef struct node
 {
 	KeyType key;	/*关键字值*/
 	int si;			/*探查次数*/	
 	struct node *next;
 } Node;		/*数据结点类型*/
+
 typedef struct
 {
 	Node *link;
 } HNode;	/*头结点类型*/
+
 void CreateHT(HNode *ht[],KeyType a[],int n,int p)	/*构造哈希表*/
 {
 	int i,d,cnt;
@@ -44,6 +48,7 @@ void CreateHT(HNode *ht[],KeyType a[],int n,int p)	/*构造哈希表*/
 		}
 	}
 }
+
 void DispHT(HNode *ht[],int n,int p)	/*输出哈希表*/
 {
 	int i,sum=0;

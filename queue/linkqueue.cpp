@@ -1,20 +1,25 @@
 #include <stdio.h>
 #include <malloc.h>
+
 typedef char ElemType;
+
 typedef struct QNode 
 {
 	ElemType data;
 	struct QNode *next;
 } QType;				/*链队中结点的类型*/
+
 typedef struct qptr    	
 {
 	QType *front,*rear;
 } LinkQueue;			/*链队类型*/
+
 void InitQueue(LinkQueue *&lq)			/*lq为引用型参数*/
 {    
 	lq=(LinkQueue *)malloc(sizeof(LinkQueue));
     lq->rear=lq->front=NULL;     		/*初始情况*/
 }
+
 void EnQueue(LinkQueue *&lq,ElemType x)	/*入队运算,lq为引用型参数*/
 {
 	QType *s;
@@ -28,6 +33,7 @@ void EnQueue(LinkQueue *&lq,ElemType x)	/*入队运算,lq为引用型参数*/
 		lq->rear=s;
 	}
 }
+
 int DeQueue(LinkQueue *&lq,ElemType &x) 	/*出队运算,lq和x均为引用型参数*/
 {
 	QType *p;
@@ -42,6 +48,7 @@ int DeQueue(LinkQueue *&lq,ElemType &x) 	/*出队运算,lq和x均为引用型参
 	free(p);
 	return 1;
 }
+
 int GetHead(LinkQueue *lq,ElemType &x) 	/*取队头元素运算,x为引用型参数*/
 {
 	if (lq->front==NULL && lq->rear==NULL)	/*队空*/
@@ -49,6 +56,7 @@ int GetHead(LinkQueue *lq,ElemType &x) 	/*取队头元素运算,x为引用型参
 	x=lq->front->data;
 	return 1;
 }
+
 int QueueEmpty(LinkQueue *lq)	/*判断队空运算*/
 {
 	if (lq->front==NULL && lq->rear==NULL)

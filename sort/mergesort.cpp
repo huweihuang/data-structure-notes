@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <malloc.h>
 #define MaxSize 100
+
 typedef int KeyType;		/*关键字类型*/
+
 typedef char ElemType[10];	/*其他数据项类型*/
+
 typedef struct 
 {	
 	KeyType key;   			/*关键字域*/
 	ElemType data; 			/*其他数据域*/
 } LineList;					/*线性表元素类型*/
+
 void Merge(LineList R[],int low,int mid,int high) 
 {
 	LineList *R1;
@@ -34,6 +38,7 @@ void Merge(LineList R[],int low,int mid,int high)
 		for (k=0,i=low;i<=high;k++,i++) /*将R1复制回R中*/
 			R[i]=R1[k];
 } 
+
 void MergePass(LineList R[],int length,int n)
 {
 	int i;
@@ -42,12 +47,14 @@ void MergePass(LineList R[],int length,int n)
 	if (i+length-1<n)                	/*余下两个子表,后者长度小于length*/
 		Merge(R,i,i+length-1,n-1); 	/*归并这两个子表*/
 }
+
 void MergeSort(LineList R[],int n)	/*二路归并算法*/
 {
 	int length;
 	for (length=1;length<n;length=2*length)
 		MergePass(R,length,n);
 }
+
 void main()
 {
 	LineList R[MaxSize];

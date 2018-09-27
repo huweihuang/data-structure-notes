@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define MAXVEX 100
 #define INF 32767
+
 void Floyed(int cost[][MAXVEX],int n)
 {
 	int A[MAXVEX][MAXVEX],path[MAXVEX][MAXVEX];
@@ -46,6 +47,7 @@ void Floyed(int cost[][MAXVEX],int n)
 				}
 			}
 }
+
 void main()
 {
 	int cost[6][MAXVEX]={		/*图6.9的代价矩阵*/

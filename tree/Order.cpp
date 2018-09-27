@@ -2,12 +2,15 @@
 #include <malloc.h>
 #define MaxSize 100
 #define MaxWidth 40
+
 typedef char ElemType;
+
 typedef struct tnode
 {
 	ElemType data;
 	struct tnode *lchild,*rchild;
 } BTNode;
+
 void CreateBTree(BTNode * &bt,char *str)	/*由str创建二叉链bt*/
 {
 	BTNode *St[MaxSize],*p=NULL;
@@ -38,6 +41,7 @@ void CreateBTree(BTNode * &bt,char *str)	/*由str创建二叉链bt*/
 		ch=str[j];
 	}
 }
+
 void DispBTree(BTNode *bt)	/*以括号表示法输出二叉树*/
 {
 	if (bt!=NULL)
@@ -54,6 +58,7 @@ void DispBTree(BTNode *bt)	/*以括号表示法输出二叉树*/
 		}
 	}
 }
+
 void PreOrder(BTNode *bt)
 {
 	if (bt!=NULL)
@@ -63,6 +68,7 @@ void PreOrder(BTNode *bt)
 		PreOrder(bt->rchild);
 	}
 }
+
 void InOrder(BTNode *bt)
 {
 	if (bt!=NULL)
@@ -72,6 +78,7 @@ void InOrder(BTNode *bt)
 		InOrder(bt->rchild);
 	}
 }
+
 void PostOrder(BTNode *bt)
 {
 	if (bt!=NULL)
@@ -81,6 +88,7 @@ void PostOrder(BTNode *bt)
 		printf("%c ",bt->data);
 	}
 }
+
 void LevelOrder(BTNode *b)
 {
 	BTNode *p;
@@ -103,6 +111,7 @@ void LevelOrder(BTNode *b)
 		}
 	} 
 }
+
 void main()
 {
 	BTNode *bt;

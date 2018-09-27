@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define MAXVEX 100
 #define INF 32767
+
 void Dijkstra(int cost[][MAXVEX],int n,int v)
 {
 	int dist[MAXVEX],path[MAXVEX];
@@ -60,6 +61,7 @@ void Dijkstra(int cost[][MAXVEX],int n,int v)
 		}
 	}
 }
+
 void main()
 {
 	int cost[6][MAXVEX]={		/*图6.9的代价矩阵*/

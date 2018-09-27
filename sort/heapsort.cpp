@@ -1,12 +1,16 @@
 #include <stdio.h>
 #define MaxSize 100
+
 typedef int KeyType;		/*关键字类型*/
+
 typedef char ElemType[10];	/*其他数据项类型*/
+
 typedef struct 
 {	
 	KeyType key;   			/*关键字域*/
 	ElemType data; 			/*其他数据域*/
 } LineList;					/*线性表元素类型*/
+
 void Sift(LineList R[],int low,int high)
 {
 	int i=low,j=2*i;     		/*R[j]是R[i]的左孩子*/
@@ -23,6 +27,7 @@ void Sift(LineList R[],int low,int high)
 	}
 	R[i]=tmp;                     /*被筛选结点的值放入最终位置*/
 }
+
 void HeapSort(LineList R[],int n)
 {
 	int i;
@@ -36,6 +41,7 @@ void HeapSort(LineList R[],int n)
 		Sift(R,1,i-1);     	/*筛选R[1]结点,得到i-1个结点的堆*/
 	}
 }
+
 void main()
 {
 	LineList R[MaxSize];

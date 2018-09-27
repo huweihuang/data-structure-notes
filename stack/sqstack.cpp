@@ -1,15 +1,20 @@
 #include <stdio.h>
+
 typedef char ElemType;
+
 #define StackSize 100		/*顺序栈的初始分配空间*/
+
 typedef struct 
 {	
 	ElemType data[StackSize];	/*保存栈中元素*/
 	int top;					/*栈指针*/
 } SqStack;
+
 void InitStack(SqStack &st)		/*st为引用型参数*/
 {
 	st.top=-1;
 }
+
 int Push(SqStack &st,ElemType x)	/*进栈运算,st为引用型参数*/
 {
 	if (st.top==StackSize-1)	/*栈满*/
@@ -21,6 +26,7 @@ int Push(SqStack &st,ElemType x)	/*进栈运算,st为引用型参数*/
 		return 1;    	
 	}
 }
+
 int Pop(SqStack &st,ElemType &x)		/*出栈运算,st和x为引用型参数*/
 {
 	if (st.top==-1)		/*栈空*/
@@ -32,6 +38,7 @@ int Pop(SqStack &st,ElemType &x)		/*出栈运算,st和x为引用型参数*/
 		return 1;
 	}
 }
+
 int GetTop(SqStack st,ElemType &x)	/*取栈顶元素,x为引用型参数*/
 {
 	if (st.top==-1)		/*栈空*/
@@ -42,6 +49,7 @@ int GetTop(SqStack st,ElemType &x)	/*取栈顶元素,x为引用型参数*/
 		return 1;
 	}
 }
+
 int StackEmpty(SqStack st)	/*判断栈空运算*/
 {
 	if (st.top==-1)	/*栈空*/
@@ -49,6 +57,7 @@ int StackEmpty(SqStack st)	/*判断栈空运算*/
 	else			/*栈不空*/
 		return 0;
 }
+
 void main()
 {
 	SqStack st;

@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <malloc.h>
+
 typedef int KeyType;
+
 typedef char ElemType[10];
+
 typedef struct tnode
 {	
 	KeyType key;
 	ElemType data;
 	struct tnode *lchild,*rchild;
 } BSTNode;
+
 BSTNode *BSTSearch(BSTNode *bt,KeyType k)
 {
 	BSTNode *p=bt;
@@ -20,6 +24,7 @@ BSTNode *BSTSearch(BSTNode *bt,KeyType k)
 	}
 	return(p);
 }
+
 int BSTInsert(BSTNode *&bt,KeyType k)
 {
 	BSTNode *f,*p=bt;
@@ -44,6 +49,7 @@ int BSTInsert(BSTNode *&bt,KeyType k)
 		f->rchild=p;				/*插入*p作为*f的右孩子*/
 	return(1);
 }
+
 void CreateBST(BSTNode *&bt,KeyType str[],int n)
 {
 	bt=NULL;         			  /*初始时bt为空树*/
@@ -54,6 +60,7 @@ void CreateBST(BSTNode *&bt,KeyType str[],int n)
 		i++;
     }
 }
+
 void DispBST(BSTNode *bt)
 {
 	if (bt!=NULL)
@@ -67,6 +74,7 @@ void DispBST(BSTNode *bt)
 		}
 	}
 }
+
 int BSTDelete(BSTNode *&bt,KeyType k)
 {
 	BSTNode *p=bt,*f,*r,*f1;
@@ -129,6 +137,7 @@ int BSTDelete(BSTNode *&bt,KeyType k)
 	}
 	return(1);
 }
+
 void main()
 {
 	BSTNode *bt=NULL,*p;

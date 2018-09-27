@@ -1,15 +1,19 @@
 #include <stdio.h>
 #define QueueSize 100
+
 typedef char ElemType;
+
 typedef struct  
 {	
 	ElemType data[QueueSize];	/*保存队中元素*/
 	int front,rear;				/*队头和队尾指针*/
 } SqQueue;
+
 void InitQueue(SqQueue &qu)		/*qu为引用型参数*/
 {
    	qu.rear=qu.front=0;           /*指针初始化*/
 } 
+
 int EnQueue(SqQueue &qu,ElemType x)	/*入队运算,qu为引用型参数*/
 {
 	if ((qu.rear+1)%QueueSize==qu.front)	/*队满*/
@@ -18,6 +22,7 @@ int EnQueue(SqQueue &qu,ElemType x)	/*入队运算,qu为引用型参数*/
 	qu.data[qu.rear]=x;
 	return 1;
 }
+
 int DeQueue(SqQueue &qu,ElemType &x)	/*出队运算,qu和x为引用型参数*/
 {
     if (qu.rear==qu.front)
@@ -26,6 +31,7 @@ int DeQueue(SqQueue &qu,ElemType &x)	/*出队运算,qu和x为引用型参数*/
     x=qu.data[qu.front];
     return 1;
 }
+
 int GetHead(SqQueue qu,ElemType &x)		/*取队头元素运算,x为引用型参数*/
 {
 	if (qu.rear==qu.front)		/*队空*/
@@ -33,6 +39,7 @@ int GetHead(SqQueue qu,ElemType &x)		/*取队头元素运算,x为引用型参数
 	x=qu.data[(qu.front+1)%QueueSize];
 	return 1;
 }
+
 int QueueEmpty(SqQueue qu)		/*判断队空运算*/
 {
 	if (qu.rear==qu.front)		/*队空*/
@@ -40,6 +47,7 @@ int QueueEmpty(SqQueue qu)		/*判断队空运算*/
 	else
 		return 0;
 }
+
 void main()
 {
 	SqQueue qu;

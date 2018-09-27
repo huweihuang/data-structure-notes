@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define N 50		/*叶子结点数*/
 #define M 2*N-1		/*树中结点总数*/
+
 typedef struct
 {
 	char data;		/*结点值*/
@@ -9,11 +10,13 @@ typedef struct
 	int lchild;		/*左孩子结点*/
 	int rchild;		/*右孩子结点*/
 } HTNode;
+
 typedef struct
 {
 	char cd[N];		/*存放哈夫曼码*/
 	int start;
 } HCode;
+
 void CreateHT(HTNode ht[],int n)
 {
 	int i,k,lnode,rnode;
@@ -43,6 +46,7 @@ void CreateHT(HTNode ht[],int n)
 		ht[rnode].parent=i;
 	}
 }
+
 void CreateHCode(HTNode ht[],HCode hcd[],int n)
 {
 	int i,f,c;
@@ -63,6 +67,7 @@ void CreateHCode(HTNode ht[],HCode hcd[],int n)
 		hcd[i]=hc;
 	}
 }
+
 void DispHCode(HTNode ht[],HCode hcd[],int n)
 {
 	int i,k;
@@ -83,6 +88,7 @@ void DispHCode(HTNode ht[],HCode hcd[],int n)
 		printf("\n");
 	}
 }
+
 void main()
 {
 	int n=5,i;		/*n表示初始字符串的个数*/

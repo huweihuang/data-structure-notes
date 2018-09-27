@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <malloc.h>
+
 typedef char ElemType;
+
 typedef struct lsnode 
 {	
 	ElemType data;			/*存储结点数据*/
 	struct lsnode *next;	/*指针域*/
 } LinkStack;
+
 void InitStack(LinkStack *&ls)		/*ls为引用型参数*/
 {
 	ls=NULL;
 }
+
 void Push(LinkStack *&ls,ElemType x)		/*进栈运算,ls为引用型参数*/
 {
 	LinkStack *p;
@@ -18,6 +22,7 @@ void Push(LinkStack *&ls,ElemType x)		/*进栈运算,ls为引用型参数*/
 	p->next=ls;
 	ls=p;
 }
+
 int Pop(LinkStack *&ls,ElemType &x)		/*出栈运算,ls为引用型参数*/
 {
 	LinkStack *p;
@@ -32,6 +37,7 @@ int Pop(LinkStack *&ls,ElemType &x)		/*出栈运算,ls为引用型参数*/
        	return 1;
 	}
 }
+
 int GetTop(LinkStack *ls,ElemType &x)	/*取栈顶元素运算*/
 {
 	if (ls==NULL) 	/*栈空,下溢出*/
@@ -42,6 +48,7 @@ int GetTop(LinkStack *ls,ElemType &x)	/*取栈顶元素运算*/
        	return 1;
    	}
 }
+
 int StackEmpty(LinkStack *ls)	/*判断栈空运算*/
 {
 	if (ls==NULL)
@@ -49,6 +56,7 @@ int StackEmpty(LinkStack *ls)	/*判断栈空运算*/
 	else
 		return 0;
 } 
+
 void main()
 {
 	LinkStack *ls;

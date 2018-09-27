@@ -1,12 +1,16 @@
 #include <stdio.h>
 #define MaxSize 100
+
 typedef int KeyType;
+
 typedef char ElemType[10];
+
 typedef struct
 {	
 	KeyType key;   	/*存放关键字,KeyType为关键字类型*/
     ElemType data;	/*其他数据, ElemType为其他数据的类型*/
 } LineList;
+
 int BinSearch(LineList R[],int n,KeyType k)
 {
 	int i,low=0,high=n-1,mid;
@@ -27,6 +31,7 @@ int BinSearch(LineList R[],int n,KeyType k)
 else
 		return(i);
 }
+
 void main()
 {
 	KeyType a[]={2,4,7,9,10,14,18,26,32,40},k=7;
@@ -40,4 +45,3 @@ void main()
 	else
 		printf("%d不在a中\n",k);
 }
-

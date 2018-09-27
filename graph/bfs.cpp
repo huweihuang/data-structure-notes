@@ -5,11 +5,13 @@
 #define MAXVEX 100
 
 typedef char VertexType[3];		/*定义VertexType为char数组类型*/
+
 typedef struct vertex
 {	
 	int adjvex;     				/*顶点编号*/
 	VertexType data; 			/*顶点的信息*/
 } VType;						/*顶点类型*/
+
 typedef struct graph
 {	
 	int n,e;					/*n为实际顶点数,e为实际边数*/
@@ -23,16 +25,19 @@ typedef struct edgenode
 	int value;  				/*边的权值*/
 	struct edgenode *next;		/*下一条边的顶点*/
 } ArcNode;						/*每个顶点建立的单链表中结点的类型*/
+
 typedef struct vexnode
 {
 	VertexType data;       		/*结点信息*/
 	ArcNode *firstarc; 			/*指向第一条边结点*/
 } VHeadNode;					/*单链表的头结点类型*/
+
 typedef struct 
 {
 	int n,e;					/*n为实际顶点数,e为实际边数*/
 	VHeadNode adjlist[MAXVEX];	/*单链表头结点数组*/
 } AdjList; 						/*图的邻接表类型*/
+
 void DispAdjList(AdjList *G)
 {
 	int i;
@@ -50,6 +55,7 @@ void DispAdjList(AdjList *G)
 		printf("∧\n");
 	}
 }
+
 void MatToList(AdjMatix g,AdjList *&G)  /*例6.3算法:将邻接矩阵g转换成邻接表G*/
 {
 	int i,j;
@@ -71,6 +77,7 @@ void MatToList(AdjMatix g,AdjList *&G)  /*例6.3算法:将邻接矩阵g转换成
 			}
 	G->n=g.n;G->e=g.e;
 }
+
 void BFS(AdjList *G,int vi)		/*对邻接表g从顶点vi开始进行广宽优先遍历*/
 {
 	int i,v,visited[MAXVEX];
@@ -100,6 +107,7 @@ void BFS(AdjList *G,int vi)		/*对邻接表g从顶点vi开始进行广宽优先�
 		}
 	}
 }
+
 void main()
 {
 	int i,j;
@@ -118,4 +126,3 @@ void main()
 	printf("从顶点0的广度优先遍历序列:\n");
 	printf("\t");BFS(G,0);printf("\n");
 }
-

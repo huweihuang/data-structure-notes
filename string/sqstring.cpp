@@ -1,10 +1,12 @@
 #include <stdio.h>
 #define MaxSize 100  /*最多字符个数*/
+
 typedef struct
 {	
 	char ch[MaxSize];	/*存放串字符*/
    	int len;			/*存放串的实际长度*/
 } SqString;				/*顺序串类型*/
+
 void Assign(SqString &s,char t[])	/*串赋值运算*/
 {
 	int i=0;
@@ -15,6 +17,7 @@ void Assign(SqString &s,char t[])	/*串赋值运算*/
 	}
 	s.len=i;
 }
+
 void StrCopy(SqString &s,SqString t)	/*串复制运算*/
 {
 	int i;
@@ -22,10 +25,12 @@ void StrCopy(SqString &s,SqString t)	/*串复制运算*/
 		s.ch[i]=t.ch[i];
 	s.len=t.len;
 }
+
 int StrLength(SqString s)	/*求串长运算*/
 {
 	return(s.len);
 } 
+
 int StrEqual(SqString s,SqString t)	/*判断串相等运算*/
 {
 	int i=0;
@@ -39,6 +44,7 @@ int StrEqual(SqString s,SqString t)	/*判断串相等运算*/
 		return(1);
 	}
 }
+
 SqString Concat(SqString s,SqString t)	/*串连接运算*/
 {
 	SqString r;
@@ -49,7 +55,8 @@ SqString Concat(SqString s,SqString t)	/*串连接运算*/
 		r.ch[s.len+j]=t.ch[j];
 	r.len=i+j;
 	return(r);					/*返回r*/
-} 
+}
+
 SqString SubStr(SqString s,int i,int j)	/*求子串运算*/
 {
 	SqString t;
@@ -64,6 +71,7 @@ SqString SubStr(SqString s,int i,int j)	/*求子串运算*/
 	}
 	return(t);
 } 
+
 int Index(SqString s,SqString t)	/*查找子串位置运算*/
 {
 	int i=0,j=0,k;				/*i和j分别扫描主串s和子串t*/
@@ -83,7 +91,8 @@ int Index(SqString s,SqString t)	/*查找子串位置运算*/
 	else
 		k=-1;		/*置特殊值-1*/
 	return(k);
-} 
+}
+
 int InsStr(SqString &s,int i,SqString t)	/*子串插入运算*/
 {
 	int j;
@@ -98,7 +107,8 @@ int InsStr(SqString &s,int i,SqString t)	/*子串插入运算*/
 		s.len=s.len+t.len;     		/*修改s串长度*/
 		return(1);
 	}
-} 
+}
+
 int DelStr(SqString &s,int i,int j)	/*子串删除运算*/
 {
 	int k;
@@ -112,6 +122,7 @@ int DelStr(SqString &s,int i,int j)	/*子串删除运算*/
 		return(1);
 	}
 } 
+
 SqString RepStrAll(SqString s,SqString s1,SqString s2)	/*子串替换运算*/
 {
 	int i;
@@ -124,6 +135,7 @@ SqString RepStrAll(SqString s,SqString s1,SqString s2)	/*子串替换运算*/
 	}
 	return(s);
 }
+
 void DispStr(SqString s)	/*输出串运算*/
 {
 	int i;
@@ -131,6 +143,7 @@ void DispStr(SqString s)	/*输出串运算*/
 		printf("%c",s.ch[i]);
 	printf("\n");
 }
+
 void main()
 {
 	SqString s1,s2,s3,s4,s5,s6,s7;

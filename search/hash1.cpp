@@ -1,11 +1,14 @@
 #include <stdio.h>
 #define MaxSize 100		/*哈希表最大长度*/
+
 typedef int KeyType;
+
 typedef struct
 {
 	KeyType key;	/*关键字值*/
 	int si;			/*探查次数*/
 } HashTable;
+
 void CreateHT(HashTable ht[],KeyType a[],int n,int m,int p)	/*构造哈希表*/
 {
 	int i,d,cnt;
@@ -35,6 +38,7 @@ void CreateHT(HashTable ht[],KeyType a[],int n,int m,int p)	/*构造哈希表*/
 		}
 	}
 }
+
 void DispHT(HashTable ht[],int n,int m)	/*输出哈希表*/
 {
 	int i;
@@ -57,6 +61,7 @@ void DispHT(HashTable ht[],int n,int m)	/*输出哈希表*/
 	avg=avg/n;
 	printf("平均查找长度:ASL(%d)=%g\n",n,avg);
 }
+
 void main()
 {
 	HashTable ht[MaxSize];

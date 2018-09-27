@@ -1,11 +1,13 @@
 #include <stdio.h>
 #define MAXVEX 100
+
 typedef struct 
 {	
 	int u;     /*边的起始顶点*/
 	int v;     /*边的终止顶点*/
 	int w;     /*边的权值*/
 } Edge;
+
 void Kruskal(Edge E[],int n,int e)
 {
 	int i,j,m1,m2,sn1,sn2,k;
@@ -28,6 +30,7 @@ void Kruskal(Edge E[],int n,int e)
 		j++;   						/*扫描下一条边*/
 	}
 }
+
 void main()
 {
 	int n=7,e=10;

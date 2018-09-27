@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define MAXVEX 100
 #define INF 32767       /*INF表示∞*/
+
 void Prim(int cost[][MAXVEX],int n,int v)
 /*输出最小生成树的每条边*/
 {
@@ -30,6 +31,7 @@ void Prim(int cost[][MAXVEX],int n,int v)
 			}
 	}
 }
+
 void main()
 {
 	int n=7;

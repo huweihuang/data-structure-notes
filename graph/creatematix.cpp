@@ -1,17 +1,21 @@
 #include <stdio.h>
 #define MAXVEX  100
+
 typedef char VertexType[3];		/*定义VertexType为char数组类型*/
+
 typedef struct vertex
 {	
 	int adjvex;     			/*顶点编号*/
 	VertexType data; 			/*顶点的信息*/
 } VType;						/*顶点类型*/
+
 typedef struct graph
 {
 	int n,e;					/*n为实际顶点数,e为实际边数*/
 	VType vexs[MAXVEX];			/*顶点集合*/
 	int edges[MAXVEX][MAXVEX];	/*边的集合*/
 } AdjMatix;						/*图的邻接矩阵类型*/
+
 int CreateMatix(AdjMatix &g)
 {
 	int i,j,k,b,t;
@@ -42,6 +46,7 @@ int CreateMatix(AdjMatix &g)
 	}
 	return(1);
 }
+
 void DispMatix(AdjMatix g)
 {
 	int i,j;
@@ -53,6 +58,7 @@ void DispMatix(AdjMatix g)
 		printf("\n");
 	}
 }
+
 void main()
 {
 	AdjMatix g;

@@ -1,12 +1,16 @@
 #include <stdio.h>
 #define MaxSize 100
+
 typedef int KeyType;		/*关键字类型*/
+
 typedef char ElemType[10];	/*其他数据项类型*/
+
 typedef struct 
 {	
 	KeyType key;   			/*关键字域*/
 	ElemType data; 			/*其他数据域*/
 } LineList;					/*线性表元素类型*/
+
 void QuickSort(LineList R[],int s,int t) /*对R[s]至R[t]的元素进行快速排序*/
 {
 	int i=s,j=t;
@@ -26,6 +30,7 @@ void QuickSort(LineList R[],int s,int t) /*对R[s]至R[t]的元素进行快速�
 		QuickSort(R,i+1,t);	/*对右区间递归排序*/
 	}
 }
+
 void main()
 {
 	LineList R[MaxSize];
