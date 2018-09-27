@@ -1,16 +1,20 @@
 #include <stdio.h>
 #include <malloc.h>
+
 typedef char ElemType;
+
 typedef struct node 
 { 	
 	ElemType data;			/*数据域*/
 	struct node *next; 		/*指针域*/
 } SLink;
+
 void InitList(SLink *&L)   	/*初始化线性表,L为引用型参数*/
 {
     L=(SLink *)malloc(sizeof(SLink));
     L->next=L;
 }
+
 int GetLength(SLink *L)	/*求线性表的长度*/
 {
     int i=0;
@@ -21,6 +25,7 @@ int GetLength(SLink *L)	/*求线性表的长度*/
     }
     return i;
 }
+
 int GetElem(SLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 {
     int j=1;
@@ -49,6 +54,7 @@ int Locate(SLink *L,ElemType x)	/*按值查找*/
 	else
 		return(i);
 }
+
 int InsElem(SLink *L,ElemType x,int i)	/*插入结点*/
 {
     int j=1;
@@ -65,6 +71,7 @@ int InsElem(SLink *L,ElemType x,int i)	/*插入结点*/
     p->next=s;
     return 1;
 }
+
 int DelElem(SLink *L,int i)	/*删除结点*/
 {
     int j=1;
@@ -80,6 +87,7 @@ int DelElem(SLink *L,int i)	/*删除结点*/
     free(q);
     return 1;
 }
+
 void DispList(SLink *L)	/*输出线性表*/
 {
     SLink *p=L->next;
@@ -89,6 +97,7 @@ void DispList(SLink *L)	/*输出线性表*/
     }
     printf("\n");
 }
+
 void main()
 {
 	int i;

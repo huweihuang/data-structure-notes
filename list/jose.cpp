@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define MaxSize 50
+
 void jose(int n,int m)
 {
 	int mon[MaxSize];			/*存放n个猴子的编号*/
@@ -28,6 +29,7 @@ void jose(int n,int m)
 	}
 	printf("\n");
 }
+
 void main()
 {
 	int m,n;

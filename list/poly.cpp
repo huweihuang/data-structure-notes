@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include <malloc.h>
+
 typedef struct node
 {  	float coef;    		/*序数*/
    	int expn;      		/*指数*/
    	struct node *next;	/*指向下一个结点的指针*/
 } PolyNode;
+
 void InitList(PolyNode *&L)		/*初始化多项式单链表*/
 {
     L=(PolyNode *)malloc(sizeof(PolyNode));	/*建立头结点*/
     L->next=NULL;
 }
+
 int GetLength(PolyNode *L)		/*求多项式单链表的长度*/
 {
     int i=0;
@@ -20,6 +23,7 @@ int GetLength(PolyNode *L)		/*求多项式单链表的长度*/
     }
     return i;
 }
+
 PolyNode *GetElem(PolyNode *L,int i)	/*返回多项式单链表中第i个结点的指针*/
 {
     int j=1;
@@ -32,6 +36,7 @@ PolyNode *GetElem(PolyNode *L,int i)	/*返回多项式单链表中第i个结点�
     }
     return p;
 }
+
 PolyNode *Locate(PolyNode *L,float c,int e)	/*在多项式单链表中按值查找*/
 {
     PolyNode *p=L->next;
@@ -39,6 +44,7 @@ PolyNode *Locate(PolyNode *L,float c,int e)	/*在多项式单链表中按值查�
         	p=p->next;
     return p;
 }
+
 int InsElem(PolyNode *&L,float c,int e,int i)  /*在多项式单链表中插入一个结点*/
 {
     int j=1;
@@ -55,6 +61,7 @@ int InsElem(PolyNode *&L,float c,int e,int i)  /*在多项式单链表中插入�
     p->next=s;
     return 1;
 }
+
 int DelElem(PolyNode *L,int i)		/*在多项式单链表中删除一个结点*/
 {
     int j=1;
@@ -70,6 +77,7 @@ int DelElem(PolyNode *L,int i)		/*在多项式单链表中删除一个结点*/
     free(q);
     return 1;
 }
+
 void DispList(PolyNode *L)		/*输出多项式单链表的元素值*/
 {
 	PolyNode *p=L->next;
@@ -87,6 +95,7 @@ void CreaPolyList(PolyNode *&L,float C[],int E[],int n)
     for (i=0;i<n;i++)
         InsElem(L,C[i],E[i],i+1);
 }
+
 void SortPloy(PolyNode *&L)	/*对L的多项式单链表按expn域递增排序*/
 {
 	PolyNode *p=L->next,*q,*pre;
@@ -112,6 +121,7 @@ void SortPloy(PolyNode *&L)	/*对L的多项式单链表按expn域递增排序*/
 		}	
 	}
 }
+
 PolyNode *AddPoly(PolyNode *pa,PolyNode *pb)
 {
 	PolyNode *pc,*p1=pa->next,*p2=pb->next,*p,*tc,*s;
@@ -158,6 +168,7 @@ PolyNode *AddPoly(PolyNode *pa,PolyNode *pb)
 	tc->next=NULL;		/*新建单链表最后结点的next域置空*/
 	return pc;
 }
+
 void main()
 {
 	PolyNode *L1,*L2,*L3;
