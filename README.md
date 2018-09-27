@@ -20,7 +20,7 @@
     * [链串基本运算](string/linkstring.cpp) 
 * [二叉树]()
     * [二叉树基本运算](tree/btree.md) 
-    * [二叉树4种遍历算法](tree/Order.md) 
+    * [二叉树4种遍历算法](tree/order.md) 
     * [哈夫曼树](tree/huffman.md) 
 * [图]()
     * [有向图连接矩阵](graph/creatematix.cpp) 
