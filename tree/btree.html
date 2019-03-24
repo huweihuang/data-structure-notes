@@ -87,8 +87,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="order.html" />
+    <link rel="next" href="btree-by-go.html" />
     
+    
+    <link rel="prev" href="btree-concept.html" />
     
 
     
@@ -488,12 +490,27 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../string/sqstring.html">
+        <li class="chapter " data-level="1.6.1" data-path="../string/string-concept.html">
+            
+                <a href="../string/string-concept.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    串的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../string/sqstring.html">
             
                 <a href="../string/sqstring.html">
             
                     
-                        <b>1.6.1.</b>
+                        <b>1.6.2.</b>
                     
                     顺序串基本运算
             
@@ -503,12 +520,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../string/linkstring.html">
+        <li class="chapter " data-level="1.6.3" data-path="../string/linkstring.html">
             
                 <a href="../string/linkstring.html">
             
                     
-                        <b>1.6.2.</b>
+                        <b>1.6.3.</b>
                     
                     链串基本运算
             
@@ -539,12 +556,27 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.1" data-path="btree.html">
+        <li class="chapter " data-level="1.7.1" data-path="btree-concept.html">
+            
+                <a href="btree-concept.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    二叉树的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="btree.html">
             
                 <a href="btree.html">
             
                     
-                        <b>1.7.1.</b>
+                        <b>1.7.2.</b>
                     
                     二叉树基本运算
             
@@ -554,12 +586,27 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="order.html">
+        <li class="chapter " data-level="1.7.3" data-path="btree-by-go.html">
+            
+                <a href="btree-by-go.html">
+            
+                    
+                        <b>1.7.3.</b>
+                    
+                    二叉树基本运算(By-Go)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="order.html">
             
                 <a href="order.html">
             
                     
-                        <b>1.7.2.</b>
+                        <b>1.7.4.</b>
                     
                     二叉树4种遍历算法
             
@@ -569,12 +616,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="huffman.html">
+        <li class="chapter " data-level="1.7.5" data-path="huffman.html">
             
                 <a href="huffman.html">
             
                     
-                        <b>1.7.3.</b>
+                        <b>1.7.5.</b>
                     
                     哈夫曼树
             
@@ -1043,7 +1090,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x57FA;&#x672C;&#x8FD0;&#x7B97;">&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x57FA;&#x672C;&#x8FD0;&#x7B97;</h1>
-<h2 id="by-c">By C++</h2>
+<h2 id="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5B9A;&#x4E49;">&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5B9A;&#x4E49;</h2>
 <pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;malloc.h&gt;</span></span>
 <span class="token macro property">#<span class="token directive keyword">define</span> MaxSize 100</span>
@@ -1056,8 +1103,9 @@
     ElemType data<span class="token punctuation">;</span>
     <span class="token keyword">struct</span> tnode <span class="token operator">*</span>lchild<span class="token punctuation">,</span><span class="token operator">*</span>rchild<span class="token punctuation">;</span>
 <span class="token punctuation">}</span> BTNode<span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">CreateBTree</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span> <span class="token operator">&amp;</span>bt<span class="token punctuation">,</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>    <span class="token comment">/*&#x7531;str&#x521B;&#x5EFA;&#x4E8C;&#x53C9;&#x94FE;bt*/</span>
+</code></pre>
+<h2 id="&#x7531;str&#x521B;&#x5EFA;&#x4E8C;&#x53C9;&#x94FE;">&#x7531;str&#x521B;&#x5EFA;&#x4E8C;&#x53C9;&#x94FE;</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">CreateBTree</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span> <span class="token operator">&amp;</span>bt<span class="token punctuation">,</span><span class="token keyword">char</span> <span class="token operator">*</span>str<span class="token punctuation">)</span>    <span class="token comment">/*&#x7531;str&#x521B;&#x5EFA;&#x4E8C;&#x53C9;&#x94FE;bt*/</span>
 <span class="token punctuation">{</span>
     BTNode <span class="token operator">*</span>St<span class="token punctuation">[</span>MaxSize<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token operator">*</span>p<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
     <span class="token keyword">int</span> top<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>k<span class="token punctuation">,</span>j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>  
@@ -1087,8 +1135,9 @@
         ch<span class="token operator">=</span>str<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">BTHeight</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x9AD8;&#x5EA6;*/</span>
+</code></pre>
+<h2 id="&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x9AD8;&#x5EA6;">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x9AD8;&#x5EA6;</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token function">BTHeight</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x9AD8;&#x5EA6;*/</span>
 <span class="token punctuation">{</span>
        <span class="token keyword">int</span> lchilddep<span class="token punctuation">,</span>rchilddep<span class="token punctuation">;</span>
        <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">/*&#x7A7A;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x4E3A;0*/</span>
@@ -1098,8 +1147,9 @@
         <span class="token keyword">return</span> <span class="token punctuation">(</span>lchilddep<span class="token operator">&gt;</span>rchilddep<span class="token punctuation">)</span><span class="token operator">?</span> <span class="token punctuation">(</span>lchilddep<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token punctuation">(</span>rchilddep<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
        <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">NodeCount</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x6C42;&#x4E8C;&#x53C9;&#x6811;bt&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;*/</span>
+</code></pre>
+<h2 id="&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token function">NodeCount</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x6C42;&#x4E8C;&#x53C9;&#x6811;bt&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;*/</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> num1<span class="token punctuation">,</span>num2<span class="token punctuation">;</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>    <span class="token comment">/*&#x7A7A;&#x6811;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x4E3A;0*/</span> 
@@ -1110,8 +1160,9 @@
             <span class="token keyword">return</span> <span class="token punctuation">(</span>num1<span class="token operator">+</span>num2<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">LeafCount</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x6C42;&#x4E8C;&#x53C9;&#x6811;bt&#x7684;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;*/</span>
+</code></pre>
+<h2 id="&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;">&#x6C42;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token function">LeafCount</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x6C42;&#x4E8C;&#x53C9;&#x6811;bt&#x7684;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;*/</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> num1<span class="token punctuation">,</span>num2<span class="token punctuation">;</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>    <span class="token comment">/*&#x7A7A;&#x6811;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;&#x4E3A;0*/</span> 
@@ -1124,8 +1175,9 @@
             <span class="token keyword">return</span> <span class="token punctuation">(</span>num1<span class="token operator">+</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">DispBTree</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x4EE5;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E8C;&#x53C9;&#x6811;*/</span>
+</code></pre>
+<h2 id="&#x4EE5;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E8C;&#x53C9;&#x6811;">&#x4EE5;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E8C;&#x53C9;&#x6811;</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">DispBTree</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>    <span class="token comment">/*&#x4EE5;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E8C;&#x53C9;&#x6811;*/</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>    
@@ -1141,8 +1193,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">DispBTree1</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>  <span class="token comment">/*&#x4EE5;&#x51F9;&#x5165;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;*/</span>
+</code></pre>
+<h2 id="&#x4EE5;&#x51F9;&#x5165;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;">&#x4EE5;&#x51F9;&#x5165;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">DispBTree1</span><span class="token punctuation">(</span>BTNode <span class="token operator">*</span>bt<span class="token punctuation">)</span>  <span class="token comment">/*&#x4EE5;&#x51F9;&#x5165;&#x8868;&#x793A;&#x6CD5;&#x8F93;&#x51FA;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;*/</span>
 <span class="token punctuation">{</span>
     BTNode <span class="token operator">*</span>St<span class="token punctuation">[</span>MaxSize<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token operator">*</span>p<span class="token punctuation">;</span>
     <span class="token keyword">int</span> Level<span class="token punctuation">[</span>MaxSize<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>top<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">,</span>i<span class="token punctuation">,</span>width<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>
@@ -1187,8 +1240,9 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="main">main</h2>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     BTNode <span class="token operator">*</span>bt<span class="token punctuation">;</span>
     <span class="token function">CreateBTree</span><span class="token punctuation">(</span>bt<span class="token punctuation">,</span><span class="token string">&quot;A(B(D,E(G,H)),C(,F(I)))&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">/*&#x6784;&#x9020;&#x56FE;5.10(a)&#x6240;&#x793A;&#x7684;&#x4E8C;&#x53C9;&#x6811;*/</span>
@@ -1199,235 +1253,8 @@
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;bt&#x51F9;&#x5165;&#x8868;&#x793A;:\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">DispBTree1</span><span class="token punctuation">(</span>bt<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="by-golang">By Golang</h2>
-<pre class="language-"><code class="lang-go"><span class="token comment">// Package binarysearchtree creates a ItemBinarySearchTree data structure for the Item type</span>
-<span class="token keyword">package</span> binarysearchtree
-
-<span class="token keyword">import</span> <span class="token punctuation">(</span>
-    <span class="token string">&quot;fmt&quot;</span>
-    <span class="token string">&quot;sync&quot;</span>
-<span class="token punctuation">)</span>
-
-<span class="token comment">// Item the type of the binary search tree</span>
-<span class="token keyword">type</span> Item <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
-
-<span class="token comment">// Node a single node that composes the tree</span>
-<span class="token keyword">type</span> Node <span class="token keyword">struct</span> <span class="token punctuation">{</span>
-    key   <span class="token builtin">int</span>
-    value Item
-    left  <span class="token operator">*</span>Node <span class="token comment">//left</span>
-    right <span class="token operator">*</span>Node <span class="token comment">//right</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// ItemBinarySearchTree the binary search tree of Items</span>
-<span class="token keyword">type</span> ItemBinarySearchTree <span class="token keyword">struct</span> <span class="token punctuation">{</span>
-    root <span class="token operator">*</span>Node
-    lock sync<span class="token punctuation">.</span>RWMutex
-<span class="token punctuation">}</span>
-
-<span class="token comment">// Insert inserts the Item t in the tree</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">Insert</span><span class="token punctuation">(</span>key <span class="token builtin">int</span><span class="token punctuation">,</span> value Item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    n <span class="token operator">:=</span> <span class="token operator">&amp;</span>Node<span class="token punctuation">{</span>key<span class="token punctuation">,</span> value<span class="token punctuation">,</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> <span class="token boolean">nil</span><span class="token punctuation">}</span>
-    <span class="token keyword">if</span> bst<span class="token punctuation">.</span>root <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        bst<span class="token punctuation">.</span>root <span class="token operator">=</span> n
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token function">insertNode</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> n<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal function to find the correct place for a node in a tree</span>
-<span class="token keyword">func</span> <span class="token function">insertNode</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span> newNode <span class="token operator">*</span>Node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> newNode<span class="token punctuation">.</span>key <span class="token operator">&lt;</span> node<span class="token punctuation">.</span>key <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> node<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-            node<span class="token punctuation">.</span>left <span class="token operator">=</span> newNode
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token function">insertNode</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span> newNode<span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> node<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-            node<span class="token punctuation">.</span>right <span class="token operator">=</span> newNode
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token function">insertNode</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span> newNode<span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// InOrderTraverse visits all nodes with in-order traversing</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">InOrderTraverse</span><span class="token punctuation">(</span>f <span class="token keyword">func</span><span class="token punctuation">(</span>Item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RUnlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">inOrderTraverse</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal recursive function to traverse in order</span>
-<span class="token keyword">func</span> <span class="token function">inOrderTraverse</span><span class="token punctuation">(</span>n <span class="token operator">*</span>Node<span class="token punctuation">,</span> f <span class="token keyword">func</span><span class="token punctuation">(</span>Item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> n <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token function">inOrderTraverse</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>left<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-        <span class="token function">f</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
-        <span class="token function">inOrderTraverse</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>right<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// PreOrderTraverse visits all nodes with pre-order traversing</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">PreOrderTraverse</span><span class="token punctuation">(</span>f <span class="token keyword">func</span><span class="token punctuation">(</span>Item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">preOrderTraverse</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal recursive function to traverse pre order</span>
-<span class="token keyword">func</span> <span class="token function">preOrderTraverse</span><span class="token punctuation">(</span>n <span class="token operator">*</span>Node<span class="token punctuation">,</span> f <span class="token keyword">func</span><span class="token punctuation">(</span>Item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> n <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token function">f</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
-        <span class="token function">preOrderTraverse</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>left<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-        <span class="token function">preOrderTraverse</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>right<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// PostOrderTraverse visits all nodes with post-order traversing</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">PostOrderTraverse</span><span class="token punctuation">(</span>f <span class="token keyword">func</span><span class="token punctuation">(</span>Item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">postOrderTraverse</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal recursive function to traverse post order</span>
-<span class="token keyword">func</span> <span class="token function">postOrderTraverse</span><span class="token punctuation">(</span>n <span class="token operator">*</span>Node<span class="token punctuation">,</span> f <span class="token keyword">func</span><span class="token punctuation">(</span>Item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> n <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token function">postOrderTraverse</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>left<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-        <span class="token function">postOrderTraverse</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>right<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
-        <span class="token function">f</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// Min returns the Item with min value stored in the tree</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">Min</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>Item <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RUnlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    n <span class="token operator">:=</span> bst<span class="token punctuation">.</span>root
-    <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">nil</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> n<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token operator">&amp;</span>n<span class="token punctuation">.</span>value
-        <span class="token punctuation">}</span>
-        n <span class="token operator">=</span> n<span class="token punctuation">.</span>left
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// Max returns the Item with max value stored in the tree</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">Max</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>Item <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RUnlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    n <span class="token operator">:=</span> bst<span class="token punctuation">.</span>root
-    <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">nil</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">for</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> n<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token operator">&amp;</span>n<span class="token punctuation">.</span>value
-        <span class="token punctuation">}</span>
-        n <span class="token operator">=</span> n<span class="token punctuation">.</span>right
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// Search returns true if the Item t exists in the tree</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">Search</span><span class="token punctuation">(</span>key <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RLock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">RUnlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token function">search</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal recursive function to search an item in the tree</span>
-<span class="token keyword">func</span> <span class="token function">search</span><span class="token punctuation">(</span>n <span class="token operator">*</span>Node<span class="token punctuation">,</span> key <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">bool</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">false</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> key <span class="token operator">&lt;</span> n<span class="token punctuation">.</span>key <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token function">search</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>left<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> key <span class="token operator">&gt;</span> n<span class="token punctuation">.</span>key <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token function">search</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>right<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token boolean">true</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// Remove removes the Item with key `key` from the tree</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">Remove</span><span class="token punctuation">(</span>key <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token function">remove</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal recursive function to remove an item</span>
-<span class="token keyword">func</span> <span class="token function">remove</span><span class="token punctuation">(</span>node <span class="token operator">*</span>Node<span class="token punctuation">,</span> key <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">*</span>Node <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> node <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">nil</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> key <span class="token operator">&lt;</span> node<span class="token punctuation">.</span>key <span class="token punctuation">{</span>
-        node<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">remove</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> node
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> key <span class="token operator">&gt;</span> node<span class="token punctuation">.</span>key <span class="token punctuation">{</span>
-        node<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">remove</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span> key<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> node
-    <span class="token punctuation">}</span>
-    <span class="token comment">// key == node.key</span>
-    <span class="token keyword">if</span> node<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token operator">&amp;&amp;</span> node<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        node <span class="token operator">=</span> <span class="token boolean">nil</span>
-        <span class="token keyword">return</span> <span class="token boolean">nil</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> node<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        node <span class="token operator">=</span> node<span class="token punctuation">.</span>right
-        <span class="token keyword">return</span> node
-    <span class="token punctuation">}</span>
-    <span class="token keyword">if</span> node<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        node <span class="token operator">=</span> node<span class="token punctuation">.</span>left
-        <span class="token keyword">return</span> node
-    <span class="token punctuation">}</span>
-    leftmostrightside <span class="token operator">:=</span> node<span class="token punctuation">.</span>right
-    <span class="token keyword">for</span> <span class="token punctuation">{</span>
-        <span class="token comment">//find smallest value on the right side</span>
-        <span class="token keyword">if</span> leftmostrightside <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token operator">&amp;&amp;</span> leftmostrightside<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-            leftmostrightside <span class="token operator">=</span> leftmostrightside<span class="token punctuation">.</span>left
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token keyword">break</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    node<span class="token punctuation">.</span>key<span class="token punctuation">,</span> node<span class="token punctuation">.</span>value <span class="token operator">=</span> leftmostrightside<span class="token punctuation">.</span>key<span class="token punctuation">,</span> leftmostrightside<span class="token punctuation">.</span>value
-    node<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">remove</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">,</span> node<span class="token punctuation">.</span>key<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> node
-<span class="token punctuation">}</span>
-
-<span class="token comment">// String prints a visual representation of the tree</span>
-<span class="token keyword">func</span> <span class="token punctuation">(</span>bst <span class="token operator">*</span>ItemBinarySearchTree<span class="token punctuation">)</span> <span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">defer</span> bst<span class="token punctuation">.</span>lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;------------------------------------------------&quot;</span><span class="token punctuation">)</span>
-    <span class="token function">stringify</span><span class="token punctuation">(</span>bst<span class="token punctuation">.</span>root<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
-    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">&quot;------------------------------------------------&quot;</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">// internal recursive function to print a tree</span>
-<span class="token keyword">func</span> <span class="token function">stringify</span><span class="token punctuation">(</span>n <span class="token operator">*</span>Node<span class="token punctuation">,</span> level <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> n <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
-        format <span class="token operator">:=</span> <span class="token string">&quot;&quot;</span>
-        <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> level<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
-            format <span class="token operator">+=</span> <span class="token string">&quot;       &quot;</span>
-        <span class="token punctuation">}</span>
-        format <span class="token operator">+=</span> <span class="token string">&quot;---[ &quot;</span>
-        level<span class="token operator">++</span>
-        <span class="token function">stringify</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>left<span class="token punctuation">,</span> level<span class="token punctuation">)</span>
-        fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span>format<span class="token operator">+</span><span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span> n<span class="token punctuation">.</span>key<span class="token punctuation">)</span>
-        <span class="token function">stringify</span><span class="token punctuation">(</span>n<span class="token punctuation">.</span>right<span class="token punctuation">,</span> level<span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; www.huweihuang.com 2017-2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at 
-2019-03-24 17:43:18
+2019-03-24 22:51:40
 </span></footer>
                                 
                                 </section>
@@ -1455,8 +1282,12 @@
 
             
                 
+                <a href="btree-concept.html" class="navigation navigation-prev " aria-label="Previous page: 二叉树的基本概念">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="order.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 二叉树4种遍历算法">
+                
+                <a href="btree-by-go.html" class="navigation navigation-next " aria-label="Next page: 二叉树基本运算(By-Go)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1467,7 +1298,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"二叉树基本运算","level":"1.7.1","depth":2,"next":{"title":"二叉树4种遍历算法","level":"1.7.2","depth":2,"path":"tree/order.md","ref":"tree/order.md","articles":[]},"previous":{"title":"二叉树","level":"1.7","depth":1,"ref":"","articles":[{"title":"二叉树基本运算","level":"1.7.1","depth":2,"path":"tree/btree.md","ref":"tree/btree.md","articles":[]},{"title":"二叉树4种遍历算法","level":"1.7.2","depth":2,"path":"tree/order.md","ref":"tree/order.md","articles":[]},{"title":"哈夫曼树","level":"1.7.3","depth":2,"path":"tree/huffman.md","ref":"tree/huffman.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga","disqus","donate"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.huweihuang.com 2017-2019","modify_label":"Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"useIdentifier":false,"shortName":"huweihuang"},"github":{"url":"https://github.com/huweihuang"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/huweihuang/data-structure-notes/blob/master/"},"splitter":{},"donate":{"alipay":"http://ozilwgpje.bkt.clouddn.com/donate/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://ozilwgpje.bkt.clouddn.com/donate/wechatpay.jpg","wechatText":"微信打赏"},"codesnippet":{},"sitemap-general":{"prefix":"https://www.huweihuang.com/data-structure-notes/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico","appleTouch":"images/favicon.ico","appleTouchMore":{"120x120":"images/favicon.ico","180x180":"images/favicon.ico"}},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"huweihuang/data-structure-notes","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"e146d71b77957235bba1e709d930f62e"},"ga":{"configuration":"auto","token":"UA-114718458-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"胡伟煌","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"数据结构学习笔记","language":"zh-hans","links":{"sidebar":{"胡伟煌的博客":"https://www.huweihuang.com"}},"gitbook":"*","description":"数据结构学习笔记"},"file":{"path":"tree/btree.md","mtime":"2019-03-24T09:43:18.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T14:27:47.636Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"二叉树基本运算","level":"1.7.2","depth":2,"next":{"title":"二叉树基本运算(By-Go)","level":"1.7.3","depth":2,"path":"tree/btree-by-go.md","ref":"tree/btree-by-go.md","articles":[]},"previous":{"title":"二叉树的基本概念","level":"1.7.1","depth":2,"path":"tree/btree-concept.md","ref":"tree/btree-concept.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga","disqus","donate"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © www.huweihuang.com 2017-2019","modify_label":"Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"disqus":{"useIdentifier":false,"shortName":"huweihuang"},"github":{"url":"https://github.com/huweihuang"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/huweihuang/data-structure-notes/blob/master/"},"splitter":{},"donate":{"alipay":"http://ozilwgpje.bkt.clouddn.com/donate/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"http://ozilwgpje.bkt.clouddn.com/donate/wechatpay.jpg","wechatText":"微信打赏"},"codesnippet":{},"sitemap-general":{"prefix":"https://www.huweihuang.com/data-structure-notes/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"images/favicon.ico","bookmark":"images/favicon.ico","appleTouch":"images/favicon.ico","appleTouchMore":{"120x120":"images/favicon.ico","180x180":"images/favicon.ico"}},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"huweihuang/data-structure-notes","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"e146d71b77957235bba1e709d930f62e"},"ga":{"configuration":"auto","token":"UA-114718458-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"胡伟煌","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"数据结构学习笔记","language":"zh-hans","links":{"sidebar":{"胡伟煌的博客":"https://www.huweihuang.com"}},"gitbook":"*","description":"数据结构学习笔记"},"file":{"path":"tree/btree.md","mtime":"2019-03-24T14:51:40.876Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T15:21:52.241Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
