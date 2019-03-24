@@ -1,6 +1,6 @@
-# 顺序队的基本运算
+# 顺序队列的基本运算
 
-## By C++
+## 顺序队列的定义
 
 ```c
 #include <stdio.h>
@@ -13,12 +13,18 @@ typedef struct
 	ElemType data[QueueSize];	/*保存队中元素*/
 	int front,rear;				/*队头和队尾指针*/
 } SqQueue;
+```
 
+## 初始化队列
+```c
 void InitQueue(SqQueue &qu)		/*qu为引用型参数*/
 {
    	qu.rear=qu.front=0;           /*指针初始化*/
 } 
+```
 
+## 入队运算
+```c
 int EnQueue(SqQueue &qu,ElemType x)	/*入队运算,qu为引用型参数*/
 {
 	if ((qu.rear+1)%QueueSize==qu.front)	/*队满*/
@@ -27,7 +33,10 @@ int EnQueue(SqQueue &qu,ElemType x)	/*入队运算,qu为引用型参数*/
 	qu.data[qu.rear]=x;
 	return 1;
 }
+```
 
+## 出队运算
+```c
 int DeQueue(SqQueue &qu,ElemType &x)	/*出队运算,qu和x为引用型参数*/
 {
     if (qu.rear==qu.front)
@@ -36,7 +45,10 @@ int DeQueue(SqQueue &qu,ElemType &x)	/*出队运算,qu和x为引用型参数*/
     x=qu.data[qu.front];
     return 1;
 }
+```
 
+## 取队头元素运算
+```c
 int GetHead(SqQueue qu,ElemType &x)		/*取队头元素运算,x为引用型参数*/
 {
 	if (qu.rear==qu.front)		/*队空*/
@@ -44,7 +56,10 @@ int GetHead(SqQueue qu,ElemType &x)		/*取队头元素运算,x为引用型参数
 	x=qu.data[(qu.front+1)%QueueSize];
 	return 1;
 }
+```
 
+## 判断队空运算
+```c
 int QueueEmpty(SqQueue qu)		/*判断队空运算*/
 {
 	if (qu.rear==qu.front)		/*队空*/
@@ -52,7 +67,10 @@ int QueueEmpty(SqQueue qu)		/*判断队空运算*/
 	else
 		return 0;
 }
+```
 
+## main
+```c
 void main()
 {
 	SqQueue qu;
@@ -76,7 +94,7 @@ void main()
 }
 ```
 
-## By Golang
+# By Golang
 
 ```go
 // Package queue creates a ItemQueue data structure for the Item type

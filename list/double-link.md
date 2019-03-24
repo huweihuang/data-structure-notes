@@ -1,5 +1,6 @@
 # 双链表的基本运算
 
+## 双链表的定义
 ```c
 #include <stdio.h>
 #include <malloc.h>
@@ -11,13 +12,19 @@ typedef struct node
 	ElemType data;				/*数据域*/
 	struct node *prior,*next;  /*分别指向前驱结点和后继结点的指针*/
 } DLink;
+```
 
+## 初始化双链表
+```c
 void InitList(DLink *&L)
 {
     L=(DLink *)malloc(sizeof(DLink));  /*创建头结点*L*/
     L->prior=L->next=NULL;
 }
+```
 
+## 求表长运算
+```c
 int GetLength(DLink *L)	/*求表长运算*/
 {
     int i=0;
@@ -28,7 +35,10 @@ int GetLength(DLink *L)	/*求表长运算*/
     }
     return i;
 }
+```
 
+## 求线性表中第i个元素
+```c
 int GetElem(DLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 {
     int j=1;
@@ -42,7 +52,10 @@ int GetElem(DLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 	e=p->data;
     return(1);          		/*返回1*/
 }
+```
 
+## 按值查找
+```c
 int Locate(DLink *L,ElemType x)	/*按值查找*/
 {
 	int i=1;
@@ -57,7 +70,10 @@ int Locate(DLink *L,ElemType x)	/*按值查找*/
 	else
 		return(i);
 }
+```
 
+## 插入运算
+```c
 int InsElem(DLink *L,ElemType x,int i)	/*插入运算*/
 {
     int j=1;
@@ -77,7 +93,10 @@ int InsElem(DLink *L,ElemType x,int i)	/*插入运算*/
      p->next=s;          	/**p的next域指向*s*/
     return 1;             	/*插入运算成功,返回1*/
 }
+```
 
+## 删除运算
+```c
 int DelElem(DLink *L,int i)	/*删除运算*/
 {
     int j=1;
@@ -95,7 +114,10 @@ int DelElem(DLink *L,int i)	/*删除运算*/
     free(q);            		/*释放第i个结点占用的空间*/
     return 1;           		/*删除运算成功,返回1*/
 }
+```
 
+## 输出线性表
+```c
 void DispList(DLink *L)	/*输出线性表*/
 {
     DLink *p=L->next;
@@ -105,7 +127,10 @@ void DispList(DLink *L)	/*输出线性表*/
     }
     printf("\n");
 }
+```
 
+## main
+```c
 void main()
 {
 	int i;

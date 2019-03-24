@@ -1,5 +1,6 @@
-# 链队的基本运算
+# 链式队列的基本运算
 
+## 链式队列的定义
 ```c
 #include <stdio.h>
 #include <malloc.h>
@@ -16,13 +17,19 @@ typedef struct qptr
 {
 	QType *front,*rear;
 } LinkQueue;			/*链队类型*/
+```
 
+## 初始化队列
+```c
 void InitQueue(LinkQueue *&lq)			/*lq为引用型参数*/
 {    
 	lq=(LinkQueue *)malloc(sizeof(LinkQueue));
     lq->rear=lq->front=NULL;     		/*初始情况*/
 }
+```
 
+## 入队运算
+```c
 void EnQueue(LinkQueue *&lq,ElemType x)	/*入队运算,lq为引用型参数*/
 {
 	QType *s;
@@ -36,7 +43,10 @@ void EnQueue(LinkQueue *&lq,ElemType x)	/*入队运算,lq为引用型参数*/
 		lq->rear=s;
 	}
 }
+```
 
+## 出队运算
+```c
 int DeQueue(LinkQueue *&lq,ElemType &x) 	/*出队运算,lq和x均为引用型参数*/
 {
 	QType *p;
@@ -51,7 +61,10 @@ int DeQueue(LinkQueue *&lq,ElemType &x) 	/*出队运算,lq和x均为引用型参
 	free(p);
 	return 1;
 }
+```
 
+## 取队头元素运算
+```c
 int GetHead(LinkQueue *lq,ElemType &x) 	/*取队头元素运算,x为引用型参数*/
 {
 	if (lq->front==NULL && lq->rear==NULL)	/*队空*/
@@ -59,7 +72,10 @@ int GetHead(LinkQueue *lq,ElemType &x) 	/*取队头元素运算,x为引用型参
 	x=lq->front->data;
 	return 1;
 }
+```
 
+## 判断队空运算
+```c
 int QueueEmpty(LinkQueue *lq)	/*判断队空运算*/
 {
 	if (lq->front==NULL && lq->rear==NULL)
@@ -67,7 +83,10 @@ int QueueEmpty(LinkQueue *lq)	/*判断队空运算*/
 	else
 		return 0;
 }
+```
 
+## main
+```c
 void main()
 {
 	LinkQueue *lq;

@@ -1,5 +1,6 @@
 #  链栈的基本运算
 
+## 链式栈的定义
 ```c
 #include <malloc.h>
 
@@ -10,12 +11,18 @@ typedef struct lsnode
 	ElemType data;			/*存储结点数据*/
 	struct lsnode *next;	/*指针域*/
 } LinkStack;
+```
 
+## 初始化栈
+```c
 void InitStack(LinkStack *&ls)		/*ls为引用型参数*/
 {
 	ls=NULL;
 }
+```
 
+## 进栈运算
+```c
 void Push(LinkStack *&ls,ElemType x)		/*进栈运算,ls为引用型参数*/
 {
 	LinkStack *p;
@@ -24,7 +31,10 @@ void Push(LinkStack *&ls,ElemType x)		/*进栈运算,ls为引用型参数*/
 	p->next=ls;
 	ls=p;
 }
+```
 
+## 出栈运算
+```c
 int Pop(LinkStack *&ls,ElemType &x)		/*出栈运算,ls为引用型参数*/
 {
 	LinkStack *p;
@@ -39,7 +49,10 @@ int Pop(LinkStack *&ls,ElemType &x)		/*出栈运算,ls为引用型参数*/
        	return 1;
 	}
 }
+```
 
+## 取栈顶元素运算
+```c
 int GetTop(LinkStack *ls,ElemType &x)	/*取栈顶元素运算*/
 {
 	if (ls==NULL) 	/*栈空,下溢出*/
@@ -50,7 +63,10 @@ int GetTop(LinkStack *ls,ElemType &x)	/*取栈顶元素运算*/
        	return 1;
    	}
 }
+```
 
+## 判断栈空运算
+```c
 int StackEmpty(LinkStack *ls)	/*判断栈空运算*/
 {
 	if (ls==NULL)
@@ -58,7 +74,10 @@ int StackEmpty(LinkStack *ls)	/*判断栈空运算*/
 	else
 		return 0;
 } 
+```
 
+## main
+```c
 void main()
 {
 	LinkStack *ls;

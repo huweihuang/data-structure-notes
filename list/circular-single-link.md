@@ -1,5 +1,6 @@
 # 循环单链表的基本运算
 
+## 循环单链表的定义
 ```c
 #include <stdio.h>
 #include <malloc.h>
@@ -11,13 +12,19 @@ typedef struct node
 	ElemType data;			/*数据域*/
 	struct node *next; 		/*指针域*/
 } SLink;
+```
 
+## 初始化循环单链表
+```c
 void InitList(SLink *&L)   	/*初始化线性表,L为引用型参数*/
 {
     L=(SLink *)malloc(sizeof(SLink));
     L->next=L;
 }
+```
 
+## 求线性表的长度
+```c
 int GetLength(SLink *L)	/*求线性表的长度*/
 {
     int i=0;
@@ -28,7 +35,10 @@ int GetLength(SLink *L)	/*求线性表的长度*/
     }
     return i;
 }
+```
 
+## 求线性表中第i个元素
+```c
 int GetElem(SLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 {
     int j=1;
@@ -43,7 +53,10 @@ int GetElem(SLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 	e=p->data;
     return(1);          	/*返回1*/
 }
+```
 
+## 按值查找
+```c
 int Locate(SLink *L,ElemType x)	/*按值查找*/
 {
 	int i=1;
@@ -57,7 +70,10 @@ int Locate(SLink *L,ElemType x)	/*按值查找*/
 	else
 		return(i);
 }
+```
 
+## 插入结点
+```c
 int InsElem(SLink *L,ElemType x,int i)	/*插入结点*/
 {
     int j=1;
@@ -74,7 +90,10 @@ int InsElem(SLink *L,ElemType x,int i)	/*插入结点*/
     p->next=s;
     return 1;
 }
+```
 
+## 删除结点
+```c
 int DelElem(SLink *L,int i)	/*删除结点*/
 {
     int j=1;
@@ -90,7 +109,10 @@ int DelElem(SLink *L,int i)	/*删除结点*/
     free(q);
     return 1;
 }
+```
 
+## 输出线性表
+```c
 void DispList(SLink *L)	/*输出线性表*/
 {
     SLink *p=L->next;
@@ -100,7 +122,10 @@ void DispList(SLink *L)	/*输出线性表*/
     }
     printf("\n");
 }
+```
 
+## main
+```c
 void main()
 {
 	int i;

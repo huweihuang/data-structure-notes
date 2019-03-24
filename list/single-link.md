@@ -1,6 +1,6 @@
 # 单链表的基本运算
 
-## By C++
+## 单链表的定义
 
 ```c
 #include <stdio.h>
@@ -13,13 +13,19 @@ typedef struct node
 	ElemType data;		/*数据域*/
 	struct node *next; 	/*指针域*/
 } SLink;
+```
 
+## 初始化单链表
+```c
 void InitList(SLink *&L) 	/*L作为引用型参数*/
 {
     L=(SLink *)malloc(sizeof(SLink));  /*创建头结点*L*/
     L->next=NULL;
 }
+```
 
+## 求线性表的长度
+```c
 int GetLength(SLink *L)	/*求线性表的长度*/
 {
     int i=0;
@@ -31,7 +37,10 @@ int GetLength(SLink *L)	/*求线性表的长度*/
     }
     return i;
 }
+```
 
+## 求线性表中第i个元素
+```c
 int GetElem(SLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 {
     int j=1;
@@ -45,7 +54,11 @@ int GetElem(SLink *L,int i,ElemType &e)	/*求线性表中第i个元素*/
 	e=p->data;
     return(1);          		/*返回1*/
 }
+```
 
+## 按值查找
+
+```c
 int Locate(SLink *L,ElemType x)	/*按值查找*/
 {
 	int i=1;
@@ -60,7 +73,10 @@ int Locate(SLink *L,ElemType x)	/*按值查找*/
 	else
 		return(i);
 }
+```
 
+## 插入结点
+```c
 int InsElem(SLink *L,ElemType x,int i)	/*插入结点*/
 {
     int j=1;
@@ -77,7 +93,10 @@ int InsElem(SLink *L,ElemType x,int i)	/*插入结点*/
 	p->next=s;        	/*将*p的next域指向*s,这样*s变成第i个结点*/
 	return 1;           /*插入运算成功,返回1*/
 }
+```
 
+## 删除结点
+```c
 int DelElem(SLink *L,int i)	/*删除结点*/
 {
     int j=1;
@@ -93,7 +112,10 @@ int DelElem(SLink *L,int i)	/*删除结点*/
     free(q);        		/*释放第i个结点占用的空间*/
     return 1;        	/*删除运算成功,返回1*/
 }
+```
 
+## 输出单链表
+```c
 void DispList(SLink *L)	/*输出单链表*/
 {
     SLink *p=L->next;
@@ -104,7 +126,10 @@ void DispList(SLink *L)	/*输出单链表*/
     }
     printf("\n");
 }
+```
 
+## main
+```c
 void main()
 {
 	int i;
@@ -129,7 +154,7 @@ void main()
 }
 ```
 
-## By Golang
+# By Golang
 
 ```go
 // Package linkedlist creates a ItemLinkedList data structure for the Item type

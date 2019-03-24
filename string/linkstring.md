@@ -1,5 +1,6 @@
 # 链串的基本运算
 
+## 链串的定义
 ```c
 #include <stdio.h>
 #include <malloc.h>
@@ -9,7 +10,10 @@ typedef struct node
 	char data;			/*存放字符*/
 	struct node *next;	/*指针域*/
 } LinkString;
+```
 
+## 赋值运算
+```c
 void Assign(LinkString *&s,char t[])
 {
 	int i=0;
@@ -26,7 +30,10 @@ void Assign(LinkString *&s,char t[])
 	}
 	tc->next=NULL;		/*终端结点的next置NULL*/
 }
+```
 
+## 复制运算
+```c
 void StrCopy(LinkString *&s,LinkString *t)	/*t=>s*/
 {
 	LinkString *p=t->next,*q,*tc;
@@ -42,7 +49,10 @@ void StrCopy(LinkString *&s,LinkString *t)	/*t=>s*/
     }
 	tc->next=NULL;		/*终端结点的next置NULL*/
 }
+```
 
+## 求串长运算
+```c
 int StrLength(LinkString *s)
 {
 	int n=0;
@@ -53,7 +63,10 @@ int StrLength(LinkString *s)
 	}
     return(n);
 }
+```
 
+## 判断串相等运算
+```c
 int StrEqual(LinkString *s,LinkString *t)
 {
 	LinkString *p=s->next,*q=t->next;
@@ -67,7 +80,10 @@ int StrEqual(LinkString *s,LinkString *t)
 		return(0);
 	return(1);
 }
+```
 
+## 串连接运算
+```c
 LinkString *Concat(LinkString *s,LinkString *t)
 {
 	LinkString *p=s->next,*q,*tc,*str;
@@ -92,7 +108,10 @@ LinkString *Concat(LinkString *s,LinkString *t)
     tc->next=NULL;
     return(str);
 }
+```
 
+## 求子串运算
+```c
 LinkString *SubStr(LinkString *s,int i,int j)
 {
 	int k=1;
@@ -119,7 +138,10 @@ LinkString *SubStr(LinkString *s,int i,int j)
 	}
 	return(str);
 }
+```
 
+## 查找子串位置运算
+```c
 int Index(LinkString *s,LinkString *t)
 {
 	LinkString *p=s->next,*p1,*q,*q1;
@@ -142,7 +164,10 @@ int Index(LinkString *s,LinkString *t)
 	}
 	return(-1);		/*若不是子串,返回-1*/
 }
+```
 
+## 子串插入运算
+```c
 int InsStr(LinkString *&s,int i,LinkString *t)
 {
 	int k;
@@ -163,7 +188,10 @@ int InsStr(LinkString *&s,int i,LinkString *t)
 	str->next=q;		/*将*q链接到*str之后*/
 	return(1);
 }
+```
 
+## 子串删除运算
+```c
 int DelStr(LinkString *&s,int i,int j)
 {
 	int k;
@@ -186,7 +214,10 @@ int DelStr(LinkString *&s,int i,int j)
 	p->next=q;
 	return(1);
 }
+```
 
+## 子串替换运算
+```c
 LinkString *RepStrAll(LinkString *s,LinkString *s1,LinkString *s2)
 {
 	int i;
@@ -199,7 +230,10 @@ LinkString *RepStrAll(LinkString *s,LinkString *s1,LinkString *s2)
 	}
 	return(s);
 }
+```
 
+## 输出串运算
+```c
 void DispStr(LinkString *s)
 {
 	LinkString *p=s->next;
@@ -210,7 +244,10 @@ void DispStr(LinkString *s)
 	}
 	printf("\n");
 }
+```
 
+## main
+```c
 void main()
 {
 	LinkString *s1,*s2,*s3,*s4,*s5,*s6,*s7;
