@@ -1,5 +1,6 @@
 数据结构算法源码
 
+* [数据结构概述](introduction/data-structure-overview.md)
 * [线性表]()
     * [顺序表的基本运算](list/sqlist.md)
     * [单链表的基本运算](list/single-link.md)
@@ -36,8 +37,8 @@
     * [二分法查找](search/binsearch.md) 
     * [分块查找](search/blksearch.md) 
     * [二叉排序树查找](search/bstree.md) 
-    * [哈希表查找](search/hash1.md) 
-    * [哈希查找](search/hash2.md) 
+    * [哈希表查找](search/hashtable.md) 
+    * [哈希查找](search/hash.md) 
 * [排序]()
     * [插入排序](sort/insertsort.md) 
     * [希尔排序](sort/shellsort.md) 
