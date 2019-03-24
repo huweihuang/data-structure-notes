@@ -5,6 +5,7 @@
 <url> <loc>https://www.huweihuang.com/data-structure-notes/list/list-concept.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/list/sqlist.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/list/single-link.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/list/link-by-go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/list/circular-single-link.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/list/double-link.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/list/circular-double-link.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -13,9 +14,11 @@
 <url> <loc>https://www.huweihuang.com/data-structure-notes/stack/stack-concept.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/stack/sqstack.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/stack/linkstack.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/stack/stack-by-go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/queue/queue-concept.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/queue/sqqueue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/queue/linkqueue.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/queue/queue-by-go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/queue/seedoctor.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/string/string-concept.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/string/sqstring.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -25,8 +28,10 @@
 <url> <loc>https://www.huweihuang.com/data-structure-notes/tree/btree-by-go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/tree/order.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/tree/huffman.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/graph/graph-concept.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/creatematix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/createadjlist.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/graph/graph-by-go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/bfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/dfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/prim.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
