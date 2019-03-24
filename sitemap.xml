@@ -20,6 +20,8 @@
 <url> <loc>https://www.huweihuang.com/data-structure-notes/tree/huffman.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/creatematix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/createadjlist.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/graph/bfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/graph/dfs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/prim.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/kruskal.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/graph/dijkstra.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -38,4 +40,5 @@
 <url> <loc>https://www.huweihuang.com/data-structure-notes/sort/quicksort.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/sort/mergesort.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://www.huweihuang.com/data-structure-notes/sort/radixsort.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.huweihuang.com/data-structure-notes/sort/topsort.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
