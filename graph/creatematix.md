@@ -1,5 +1,6 @@
 # 有向图连接矩阵
 
+## 图的定义
 ```c
 #include <stdio.h>
 #define MAXVEX  100
@@ -18,7 +19,10 @@ typedef struct graph
 	VType vexs[MAXVEX];			/*顶点集合*/
 	int edges[MAXVEX][MAXVEX];	/*边的集合*/
 } AdjMatix;						/*图的邻接矩阵类型*/
+```
 
+## 创建图
+```c
 int CreateMatix(AdjMatix &g)
 {
 	int i,j,k,b,t;
@@ -49,7 +53,10 @@ int CreateMatix(AdjMatix &g)
 	}
 	return(1);
 }
+```
 
+## 列出图
+```c
 void DispMatix(AdjMatix g)
 {
 	int i,j;
@@ -61,7 +68,10 @@ void DispMatix(AdjMatix g)
 		printf("\n");
 	}
 }
+```
 
+## main
+```c
 void main()
 {
 	AdjMatix g;
