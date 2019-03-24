@@ -1,7 +1,7 @@
 
 {
-    "title": "数据结构源码",
-    "description": "数据结构源码",
+    "title": "数据结构学习笔记",
+    "description": "数据结构学习笔记",
     "language": "zh-hans",
     "author": "胡伟煌",
     "links": {
@@ -44,12 +44,12 @@
             "caption": "图片 - _CAPTION_"
         },
         "github-buttons": {
-            "repo": "huweihuang/linux-notes",
+            "repo": "huweihuang/data-structure-notes",
             "types": ["star"],
             "size": "small"
         },
         "tbfed-pagefooter": {
-            "copyright": "Copyright © www.huweihuang.com 2017-2018",
+            "copyright": "Copyright © www.huweihuang.com 2017-2019",
             "modify_label": "Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
