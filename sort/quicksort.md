@@ -1,5 +1,7 @@
 # 快速排序
 
+## By C++
+
 ```c
 #include <stdio.h>
 #define MaxSize 100
@@ -50,5 +52,36 @@ void main()
 	for (i=0;i<n;i++)
 		printf("%3d",R[i].key);
 	printf("\n");
+}
+```
+
+## By Golang
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// 快速排序
+func selectSort(list []int) []int {
+	var minIndex int
+	for i := 0; i < len(list); i++ {
+		minIndex = i
+		for j := i + 1; j < len(list); j++ {
+			if list[j] < list[minIndex] { // 寻找未排序序列中最小的数
+				minIndex = j
+			}
+		}
+		list[i], list[minIndex] = list[minIndex], list[i] // 将当前数与最小的数交换位置
+	}
+	return list
+}
+
+func main() {
+	list := []int{7, 3, 1, 14, 2}
+	result := selectSort(list)
+	fmt.Println(result)
 }
 ```

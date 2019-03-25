@@ -1,5 +1,6 @@
 # 冒泡排序
 
+## By C++
 ```c
 #include <stdio.h>
 #define MaxSize 100
@@ -48,5 +49,33 @@ void main()
 	for (i=0;i<n;i++)
 		printf("%3d",R[i].key);
 	printf("\n");
+}
+```
+
+## By Golang
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+// 冒泡排序，从小到大
+func bubbleSort(list []int) []int {
+	for i := 0; i < len(list)-1; i++ {
+		for j := 0; j < len(list)-1-i; j++ {
+			if list[j] > list[j+1] { // 相邻元素对比
+				list[j], list[j+1] = list[j+1], list[j] // 如果后者比前者小，就交互位置
+			}
+		}
+	}
+	return list
+}
+
+func main() {
+	list := []int{7, 3, 1, 14, 2}
+	result := bubbleSort(list)
+	fmt.Println(result)
 }
 ```
