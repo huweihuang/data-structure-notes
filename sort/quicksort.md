@@ -64,24 +64,41 @@ import (
 	"fmt"
 )
 
-// 快速排序
-func selectSort(list []int) []int {
-	var minIndex int
-	for i := 0; i < len(list); i++ {
-		minIndex = i
-		for j := i + 1; j < len(list); j++ {
-			if list[j] < list[minIndex] { // 寻找未排序序列中最小的数
-				minIndex = j
+func quickSort(list []int, left, right int) []int {
+	if left < right {
+		i, j := left, right
+		pivot := list[left] // 以左边第一个数作为基准数
+
+		// 分治
+		for i < j {
+			// 从右向左找出第一个小于基准数的，list[i] 与 list[j]交互位置
+			for i < j && list[j] > pivot {
+				j--
+			}
+			if i < j {
+				list[i] = list[j]
+			}
+
+			// 从左向右找出第一个大于基准数的，list[j] 与 list[i]交互位置
+			for i < j && list[i] < pivot {
+				i++
+			}
+			if i < j {
+				list[j] = list[i]
 			}
 		}
-		list[i], list[minIndex] = list[minIndex], list[i] // 将当前数与最小的数交换位置
+		list[i] = pivot
+
+		// 递归
+		quickSort(list, left, i-1)
+		quickSort(list, i+1, right)
 	}
 	return list
 }
 
 func main() {
-	list := []int{7, 3, 1, 14, 2}
-	result := selectSort(list)
+	list := []int{75, 87, 68, 92, 88, 61, 77, 96, 80, 72}
+	result := quickSort(list, 0, len(list)-1)
 	fmt.Println(result)
 }
 ```

@@ -74,7 +74,7 @@ func bubbleSort(list []int) []int {
 }
 
 func main() {
-	list := []int{7, 3, 1, 14, 2}
+	list := []int{75, 87, 68, 92, 88, 61, 77, 96, 80, 72}
 	result := bubbleSort(list)
 	fmt.Println(result)
 }
