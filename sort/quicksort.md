@@ -1,5 +1,9 @@
 # 快速排序
 
+## 基本思想
+
+## 步骤
+
 ## By C++
 
 ```c
@@ -67,27 +71,24 @@ import (
 func quickSort(list []int, left, right int) []int {
 	if left < right {
 		i, j := left, right
-		pivot := list[left] // 以左边第一个数作为基准数
+		pivot := list[left] // 以左边第一个数作为基准数，将第一个数暂存在pivot变量中
 
 		// 分治
 		for i < j {
-			// 从右向左找出第一个小于基准数的，list[i] 与 list[j]交互位置
-			for i < j && list[j] > pivot {
+			// 从右向左找出第一个小于基准数的，将list[j]赋值给list[i] 
+			for j > i && list[j] > pivot {
 				j--
 			}
-			if i < j {
-				list[i] = list[j]
-			}
+			list[i] = list[j]
 
-			// 从左向右找出第一个大于基准数的，list[j] 与 list[i]交互位置
+			// 从左向右找出第一个大于基准数的，将list[i]赋值给list[j] 
 			for i < j && list[i] < pivot {
 				i++
 			}
-			if i < j {
-				list[j] = list[i]
-			}
+			list[j] = list[i]
 		}
 		list[i] = pivot
+		fmt.Println(list) // 打印该趟的序列
 
 		// 递归
 		quickSort(list, left, i-1)
@@ -98,7 +99,24 @@ func quickSort(list []int, left, right int) []int {
 
 func main() {
 	list := []int{75, 87, 68, 92, 88, 61, 77, 96, 80, 72}
+	fmt.Println("初始序列:", list)
 	result := quickSort(list, 0, len(list)-1)
-	fmt.Println(result)
+	fmt.Println("最终结果:", result)
 }
+```
+
+## 排序过程
+
+```bash
+初始序列: [75 87 68 92 88 61 77 96 80 72]
+
+第 1 趟：[72 61 68 75 88 92 77 96 80 87]
+第 2 趟：[68 61 72 75 88 92 77 96 80 87]
+第 3 趟：[61 68 72 75 88 92 77 96 80 87]
+第 4 趟：[61 68 72 75 87 80 77 88 96 92]
+第 5 趟：[61 68 72 75 77 80 87 88 96 92]
+第 6 趟：[61 68 72 75 77 80 87 88 96 92]
+第 7 趟：[61 68 72 75 77 80 87 88 92 96]
+
+最终结果: [61 68 72 75 77 80 87 88 92 96]
 ```
