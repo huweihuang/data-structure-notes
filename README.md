@@ -1,6 +1,6 @@
 # 数据结构学习笔记
 
-* [目录](README.md)
+* [前言](README.md)
 * [数据结构概述](introduction/data-structure-overview.md)
 * [线性表]()
     * [线性表的基本概念](list/list-concept.md)
@@ -52,6 +52,7 @@
     * [哈希表查找](search/hashtable.md) 
     * [哈希查找](search/hash.md) 
 * [排序]()
+    * [排序方法比较](sort/sort-overview.md)
     * [插入排序](sort/insertsort.md) 
     * [希尔排序](sort/shellsort.md) 
     * [选择排序](sort/selectsort.md) 
