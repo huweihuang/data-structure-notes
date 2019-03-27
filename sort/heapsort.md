@@ -1,5 +1,11 @@
 # 堆排序
 
+## 基本思想
+
+## 步骤
+
+## By C++
+
 ```c
 #include <stdio.h>
 #define MaxSize 100
@@ -62,4 +68,9 @@ void main()
 		printf("%3d",R[i].key);
 	printf("\n");
 }
+```
+
+## By Golang
+
+```go
 ```
