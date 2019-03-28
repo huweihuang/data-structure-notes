@@ -27,7 +27,8 @@
         "sitemap-general",
         "ga",
         "disqus",
-        "donate"
+        "donate",
+        "mathjax"
     ],
     "pluginsConfig": {
         "theme-default": {
