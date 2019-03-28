@@ -1,5 +1,18 @@
 # 数据结构学习笔记
 
+> 本系列是 [数据结构学习笔记](https://www.huweihuang.com/data-structure-notes/)
+> 
+> 更多的学习笔记请参考：
+> - [Kubernetes 学习笔记](https://www.huweihuang.com/kubernetes-notes/)
+> - [Golang 学习笔记](https://www.huweihuang.com/golang-notes/)
+> - [Linux 学习笔记](https://www.huweihuang.com/linux-notes/)
+> - [数据结构学习笔记](https://www.huweihuang.com/data-structure-notes/)
+>
+> 个人博客：[www.huweihuang.com](https://www.huweihuang.com/)
+
+
+# 目录
+
 * [前言](README.md)
 * [数据结构概述](introduction/data-structure-overview.md)
 * [线性表]()
@@ -65,3 +78,9 @@
       * [快速排序](sort/quicksort.md) 
     * [归并排序](sort/mergesort.md) 
     * [基数排序](sort/radixsort.md) 
+
+# 赞赏
+
+> 如果觉得文章有帮助的话，可以打赏一下，谢谢！
+
+<img src="https://res.cloudinary.com/dqxtn0ick/image/upload/v1551599963/blog/donate.jpg" width="70%"/>
